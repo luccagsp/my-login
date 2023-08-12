@@ -1,21 +1,15 @@
-import { useState } from "react";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom"; // Importa BrowserRouter y Route
+import Login from "./Login";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-    <div className="container">
-      <div className="titulo">
-        Bienvenido
-      </div>
-      <form className="loginForm">
-        <input type="text" placeholder="Usuario" required/>
-        <input type="password" placeholder="Contraseña" required/>
-        <button type="sumbit">Login</button>
-      </form>
+    <div>
+      <h1>funca</h1>
+      <Routes>
+       <Route path="/" element={<Login></Login>}/>
+      </Routes>
     </div>
-    </>
   );
 }
 
